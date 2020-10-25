@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {useState} from "react";
 
-function App() {
+import movies from './movies.js'
+
+const App = () => {
+
+  generateMovies = () => {
+    const movieCards = movies.map(movie => {
+      return <Movie id={movie.id} title={movie.title} category={movie.category} image={movie.url} likes={movie.likes} dislikes={movie.dislikes}/>
+    })
+    return movieCards
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {this.generateMovies()}
     </div>
   );
 }
