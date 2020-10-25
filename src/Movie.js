@@ -4,9 +4,12 @@ const Movie = (props) => {
     const {title, image, likes, dislikes} = props
     return(
         <div className="movieCard">
-            <h2>{title}</h2>
+            <h3>{title}</h3>
             <img src={image} alt="movie-poster" className="movieImage"/>
-            Likes:{likes} Dislikes:{dislikes}
+            <div className="reviewButtonsContainer">
+               <button> Like </button>{likes}
+               <button> Dislike</button>{dislikes}
+            </div>
         </div>
     )
 }
