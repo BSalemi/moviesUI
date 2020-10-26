@@ -13,7 +13,14 @@ code {
     monospace;
 }
 
-.App {
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.movieContainer{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -60,4 +67,11 @@ h3 {
   font-family: 'Lato';
   font-size: 22px;
   color:coral;
+}
+
+.searchFilter{
+  padding: 8px 10px;
+  width: 200px;
+  margin-top: 5px;
+  margin-bottom: 8px
 }
