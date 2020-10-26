@@ -36,8 +36,6 @@ const App = () => {
     setFilter(event.target.value)
   }
 
-  console.log(search,"search")
-
   return (
     <div className="App">
       <Filter updateSearch={updateSearch}/>
